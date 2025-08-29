@@ -24,7 +24,7 @@
         <ul class="navbar-nav" id="navbar-nav">
             <li class="nav-item"><a href="../index.php" class="nav-link">Início</a></li>
             <li class="nav-item"><a href="../index.php#section1" class="nav-link">Sobre</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Funcionalidades</a></li>
+            <li class="nav-item"><a href="../index.php#section2" class="nav-link">Funcionalidades</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
         </ul>
     </nav>
@@ -46,10 +46,15 @@
 </section>
 
 <section id="section1">
-    <h1>Por Que Escolher o DatAna?</h1>
-    <div id="section1-content">
-        <h2>Libere o poder total dos seus dados com o DatAna.</h2>
-        <p>Nossa plataforma de análise intuitiva oferece tudo que você precisa para obter insights práticos e impulsionar o crescimento do seu negócio. Esqueça configurações complexas: com o Data_Ana, você faz o upload e vai direto ao que importa: análises preditivas e relatórios automatizados, simplificando o processo para que você tome decisões rápidas e inteligentes.</p>
+    <div class="container">
+        <div class="left">
+            Reinventando a<br> tecnologia mobile
+        </div>
+        <div class="right">
+            <h3>Junte-se a mais de um milhão de usuários felizes</h3>
+            <p>Sou um parágrafo. Aqui você pode adicionar seu próprio texto. Basta clicar em "Editar texto" ou clicar duas vezes sobre mim para editar o conteúdo e alterar a fonte. Você também pode me arrastar e soltar em qualquer lugar da página. Sou um ótimo espaço para você compartilhar a sua história com os visitantes.</p>
+            <button class="btn">Baixar aplicativo</button>
+        </div>
     </div>
 </section>
 
@@ -66,15 +71,15 @@
         <div id="reports-pdf">
             <h3>Relatórios em PDF</h3>
         </div>
-        <div id="block-secure">
-            <h3>Segurança e Confiabilidade</h3>
+        <div id="block-dashboards">
+            <h3>Dashboards interativos</h3>
         </div>
     </div>
-    <a class="codepen-button"><span>Baixar</span></a>
+    <a class="codepen-button"><span>Acesse aqui</span></a>
 </section>
 
 </body>
 <!-- função asset -->
 
-<script src="{{ asset('js/script.js') }}"></script>
+<script src="{{ asset(path: 'js/script.js') }}"></script>
 </html>

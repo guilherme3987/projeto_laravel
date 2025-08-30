@@ -38,7 +38,7 @@
 <section class="section0">
     <div class="section0-text">
         <h2>Transforme Dados <br>em Decisões com o DatAna</h2>
-        <p>Libere o poder dos seus dados com nossa plataforma de análise. Obtenha insights práticos, análises preditivas e relatórios automatizados que impulsionam o crescimento dos seus negócios.</p>
+        <p>Libere o poder dos seus dados com nossa plataforma de análise. Obtenha insights práticos, análises preditivas e relatórios automatizados que impulsionam o crescimento dos seu negócio.</p>
     </div>
     <div class="section0-devices">
         <img src="images/mock_up.png" alt="Celular e Tablet mostrando o aplicativo">
@@ -46,21 +46,21 @@
 </section>
 
 <section id="section1">
-    <div class="container">
-        <div class="left">
-            Reinventando a<br> tecnologia mobile
+        <h3>Elabore sua Estratégia com  DatAna</h3>
+        
+        <h4>Faça upload e gere insights na hora.</h4>
+        
+        <p>O DatAna representa a simplicidade de que você precisa.  Sem configurações complexas, sem desperdício de tempo.  Faça upload e vá direto ao que importa: seus insights. Obtenha insights práticos, análises preditivas e relatórios automatizados que impulsionam o crescimento dos seus negócios.</p>
+        
+        <div id="button">
+            <a class="codepen-button"><span>Acesse aqui</span></a>
+
         </div>
-        <div class="right">
-            <h3>Junte-se a mais de um milhão de usuários felizes</h3>
-            <p>Sou um parágrafo. Aqui você pode adicionar seu próprio texto. Basta clicar em "Editar texto" ou clicar duas vezes sobre mim para editar o conteúdo e alterar a fonte. Você também pode me arrastar e soltar em qualquer lugar da página. Sou um ótimo espaço para você compartilhar a sua história com os visitantes.</p>
-            <button class="btn">Baixar aplicativo</button>
-        </div>
-    </div>
+        
 </section>
 
 <section id="section2">
     <h1>A análise de dados descomplicada</h1>
-    <p>Chega de configurações complexas. Faça o upload, e pronto: seus insights, na hora.</p>
     <div class="blocks-container">
         <div id="block-stats">
             <h3>Estatísticas Simplificadas</h3>
@@ -75,7 +75,6 @@
             <h3>Dashboards interativos</h3>
         </div>
     </div>
-    <a class="codepen-button"><span>Acesse aqui</span></a>
 </section>
 
 </body>

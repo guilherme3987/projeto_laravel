@@ -14,39 +14,54 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll(".nav-link");
-  
-    // ScrollSpy
-    function onScroll() {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-link");
+  const OFFSET = 45;
+
+  // ScrollSpy
+  function onScroll() {
       let current = "";
       sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.offsetHeight;
-        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-          current = section.getAttribute("id");
-        }
+          const sectionTop = section.offsetTop - OFFSET;
+          const sectionBottom = section.offsetTop + section.offsetHeight - OFFSET;
+
+          // pageYOffset foi substituído por window.scrollY
+          if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+              current = section.getAttribute("id");
+          }
       });
-  
+
       navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${current}`) {
-          link.classList.add("active");
-        }
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+              link.classList.add("active");
+          }
       });
-    }
-  
-    // Adiciona evento de rolagem
-    window.addEventListener("scroll", onScroll);
-  
-    // Adiciona evento de clique nos links da navbar
-    navLinks.forEach(link => {
-      link.addEventListener("click", function () {
-        navLinks.forEach(link => link.classList.remove("active"));
-        this.classList.add("active");
+  }
+
+  // Adiciona evento de rolagem
+  window.addEventListener("scroll", onScroll);
+
+  // Adiciona evento de clique e suaviza a rolagem
+  navLinks.forEach(link => {
+      link.addEventListener("click", function (event) {
+          if (this.hash) {
+              event.preventDefault();
+              const targetElement = document.querySelector(this.hash);
+
+              if (targetElement) {
+                  window.scrollTo({
+                      top: targetElement.offsetTop - OFFSET,
+                      behavior: "smooth",
+                  });
+
+                  // Atualiza o hash na URL
+                  history.pushState(null, null, this.hash);
+              }
+          }
       });
-    });
   });
+});
   
   document.addEventListener("DOMContentLoaded", function () {
     const OFFSET = 80; // Altura da navbar fixa + buffer para evitar conflitos
